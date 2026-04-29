@@ -5,8 +5,8 @@
 
 **Omni-Science** adalah sebuah platform komputasi saintifik berbasis web yang dirancang untuk menjadi asisten utama bagi mahasiswa, peneliti, dan penggemar sains. Dibangun dengan arsitektur **Data-Driven Dynamic UI**, aplikasi ini menawarkan perhitungan dari level aritmatika dasar hingga kalkulus dan fisika kuantum dengan performa tinggi dan antarmuka *dark mode* yang elegan.
 
-![GitHub repo size](https://img.shields.io/github/repo-size/lamberthrumpaidus/Omni-Science_Pro?style=for-the-badge&color=blue)
-![GitHub last commit](https://img.shields.io/github/last-commit/lamberthrumpaidus/Omni-Science_Pro?style=for-the-badge&color=accent)
+![GitHub repo size](https://img.shields.io/github/repo-size/lamberthrumpaidus/Omni_Science?style=for-the-badge&color=blue)
+![GitHub last commit](https://img.shields.io/github/last-commit/lamberthrumpaidus/Omni_Science?style=for-the-badge&color=accent)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Math.js](https://img.shields.io/badge/Powered_by-Math.js-green?style=for-the-badge)
 
