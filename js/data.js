@@ -94,19 +94,20 @@ const DB = {
         "Massa & Waktu": {
             inputs: [{ id: "val", label: "Nilai", t: "number" }, { id: "f", label: "Dari", t: "sel", o: "kg,g,mg,lb,oz,ton,jam,menit,detik" }, { id: "to", label: "Ke", t: "sel", o: "kg,g,mg,lb,oz,ton,jam,menit,detik" }],
             calc: (v) => {
-                const f = { kg: 1, g: 0.001, mg: 0.000001, lb: 0.453592, oz: 0.0283495, ton: 1000, jam: 3600, menit: 60, detik: 1 };
-                if (!f[v.f] || !f[v.to]) return "Satuan tidak valid lintas dimensi";
-                let res = (v.val * f[v.f]) / f[v.to];
-                return `${parseFloat(res.toPrecision(8))} ${v.to}`;
+                const f = { kg: 1, g: 0.001, mg: 0.000001, lb: 0.45359237, oz: 0.028349523125, ton: 1000, jam: 3600, menit: 60, detik: 1 };
+                const groups = [["kg","g","mg","lb","oz","ton"],["jam","menit","detik"]];
+                if (!Number.isFinite(v.val) || !groups.some(g => g.includes(v.f) && g.includes(v.to))) return "ERROR: Satuan berbeda dimensi";
+                const res = (v.val * f[v.f]) / f[v.to];
+                return `${Number(res.toPrecision(10))} ${v.to}`;
             }
         },
         "Sistem Bilangan & Kriptografi": {
             inputs: [{ id: "val", label: "String/Angka", t: "text" }, { id: "type", label: "Operasi", t: "sel", o: "Bin2Dec,Dec2Bin,Base64Encode,Base64Decode" }],
             calc: (v) => {
-                if (v.type === "Bin2Dec") return parseInt(v.val, 2).toString();
-                if (v.type === "Dec2Bin") return parseInt(v.val, 10).toString(2);
-                if (v.type === "Base64Encode") return btoa(v.val);
-                if (v.type === "Base64Decode") return atob(v.val);
+                if (v.type === "Bin2Dec") return /^[01]+$/.test(v.val) ? parseInt(v.val, 2).toString() : "ERROR: Biner tidak valid";
+                if (v.type === "Dec2Bin") return /^-?\\d+$/.test(v.val) ? parseInt(v.val, 10).toString(2) : "ERROR: Desimal tidak valid";
+                if (v.type === "Base64Encode") return btoa(Array.from(new TextEncoder().encode(v.val), x => String.fromCharCode(x)).join(""));
+                if (v.type === "Base64Decode") return new TextDecoder("utf-8", {fatal:true}).decode(Uint8Array.from(atob(v.val), ch => ch.charCodeAt(0)));
             }
         }
     }
