@@ -105,7 +105,7 @@ const DB = {
             inputs: [{ id: "val", label: "String/Angka", t: "text" }, { id: "type", label: "Operasi", t: "sel", o: "Bin2Dec,Dec2Bin,Base64Encode,Base64Decode" }],
             calc: (v) => {
                 if (v.type === "Bin2Dec") return /^[01]+$/.test(v.val) ? parseInt(v.val, 2).toString() : "ERROR: Biner tidak valid";
-                if (v.type === "Dec2Bin") return /^-?\\d+$/.test(v.val) ? parseInt(v.val, 10).toString(2) : "ERROR: Desimal tidak valid";
+                if (v.type === "Dec2Bin") return /^-?\d+$/.test(v.val) ? parseInt(v.val, 10).toString(2) : "ERROR: Desimal tidak valid";
                 if (v.type === "Base64Encode") return btoa(Array.from(new TextEncoder().encode(v.val), x => String.fromCharCode(x)).join(""));
                 if (v.type === "Base64Decode") return new TextDecoder("utf-8", {fatal:true}).decode(Uint8Array.from(atob(v.val), ch => ch.charCodeAt(0)));
             }
