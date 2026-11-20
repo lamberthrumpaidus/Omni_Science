@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omni-Science</title>
+    <title>Omni-Science | Scientific Workspace</title><meta name="description" content="Laboratorium perhitungan sains, matematika, konversi satuan dan fisika dengan riwayat lokal."><meta name="theme-color" content="#071827"><link rel="icon" type="image/svg+xml" href="app-logo.svg">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Fira+Code:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/lab-enhancements.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
 <style>
 /* L/R FUTURE UI 2026 — non-destructive visual refresh */
@@ -24,11 +24,11 @@ body{background:radial-gradient(ellipse at 12% 5%,#0d3c3e 0%,transparent 43%),ra
 <body>
     <div id="app">
         <header>
-            <div class="lr-top-identity"><span class="lr-sys-label">ENGINEERING / WORKSPACE</span><h1>OMNI-SCIENCE</h1><a class="lr-brand-link" href="https://github.com/lamberthrumpaidus" target="_blank" rel="noopener noreferrer" aria-label="Kreator L/R di GitHub"><img class="lr-monogram" src="brand-lr.svg" alt="L/R — Lamberth Rumpaidus" loading="lazy" decoding="async"></a></div>
+            <div class="lr-top-identity"><div class="lab-app-head"><img class="lab-app-logo" src="app-logo.svg" alt="Logo aplikasi Omni-Science" width="60" height="60"><div><span class="lr-sys-label">SCIENTIFIC COMPUTING PLATFORM</span><h1>OMNI-SCIENCE</h1></div></div><div class="lab-top-actions"><button type="button" id="lab-theme" aria-label="Ubah tema">☾ Gelap</button><button type="button" id="lab-export">↓ Ekspor CSV</button></div></div>
         </header>
         <main>
-            <aside id="sidebar"></aside>
-            <section id="workspace">
+            <aside id="sidebar" aria-label="Kategori komputasi"></aside>
+            <section id="workspace" aria-label="Area komputasi"><div class="lab-work-head"><label for="lab-search">Cari kategori atau rumus</label><input class="lab-search" type="search" id="lab-search" placeholder="Cari fisika, integral, matriks… (Ctrl + K)" autocomplete="off"><div class="lab-tools"><button type="button" id="lab-favorite" aria-pressed="false">☆ Favorit</button><button type="button" id="lab-clear">Hapus Input</button><small>Terakhir: <span id="lab-recent">Belum ada</span></small></div><span id="lab-status" role="status" aria-live="polite"></span></div>
                 <div id="topbar">
                     <select id="sub-selector"></select>
                 </div>
@@ -37,14 +37,14 @@ body{background:radial-gradient(ellipse at 12% 5%,#0d3c3e 0%,transparent 43%),ra
                     <button id="btn-calc">EKSEKUSI KOMPUTASI</button>
                 </div>
                 <div id="result-panel">
-                    <div id="output-val">MENUNGGU INPUT...</div>
+                    <div id="output-val">MENUNGGU INPUT...</div><div class="lab-result-actions"><button id="lab-copy" type="button">Salin Hasil</button><small>Ctrl + Enter untuk hitung</small></div>
                 </div>
-            </section>
+<details class="lab-history-panel"><summary>Riwayat Komputasi (<span id="lab-history-count">0</span>)</summary><ul id="lab-history"></ul><button type="button" id="lab-reset">Hapus Semua Riwayat</button></details></section>
         </main>
         <footer><a class="lr-brand-link" href="https://github.com/lamberthrumpaidus" target="_blank" rel="noopener noreferrer" aria-label="L/R — GitHub"><img class="lr-monogram" src="brand-lr.svg" alt="L/R — Lamberth Rumpaidus" loading="lazy" decoding="async"></a><span class="lr-footer-caption">SCIENTIFIC COMPUTING LAB</span></footer>
     </div>
     <script src="js/data.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js"></script><script src="js/lab-enhancements.js"></script>
 </body>
 
 </html>
