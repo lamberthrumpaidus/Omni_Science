@@ -10,12 +10,21 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
-</head>
+<style>
+/* L/R FUTURE UI 2026 — non-destructive visual refresh */
+:root{--lr-aqua:#04dfbb;--lr-ice:#e8faff;--lr-line:rgba(107,239,215,.26)}
+.lr-monogram{display:block;object-fit:contain;width:clamp(100px,12vw,150px);height:auto;filter:drop-shadow(0 0 17px rgba(0,225,182,.27))}
+.lr-brand-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid var(--lr-line);border-radius:16px;background:linear-gradient(125deg,rgba(13,37,48,.86),rgba(5,16,29,.6));padding:8px 14px;box-shadow:inset 0 1px rgba(255,255,255,.06),0 14px 34px rgba(0,0,0,.16);transition:transform .2s,border-color .2s}
+.lr-brand-link:hover{transform:translateY(-2px);border-color:var(--lr-aqua)}
+:where(button,a,input,select,textarea):focus-visible{outline:2px solid var(--lr-aqua);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.lr-brand-link{transition:none!important}}
+
+body{background:radial-gradient(ellipse at 12% 5%,#0d3c3e 0%,transparent 43%),radial-gradient(ellipse at 87% 83%,#12303f 0%,transparent 50%),#050a12}#app{border:1px solid var(--lr-line);background:linear-gradient(145deg,#0e1723,#0b101c);box-shadow:0 24px 90px #0009,0 0 60px #00cba010}header{background:linear-gradient(90deg,#0d1b28,#0a1320);border-color:var(--lr-line)}.lr-top-identity{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}.lr-sys-label{font:600 10px/1.4 'Fira Code',monospace;letter-spacing:.14em;color:#79d5cc}header h1{color:#eaffff;letter-spacing:.04em;text-shadow:0 0 20px #00bba633}header .lr-monogram{width:90px}#sidebar{background:#0b1521;border-color:var(--lr-line)}.cat-btn:hover,.cat-btn.active{background:linear-gradient(90deg,#0a3c40,#101a29);color:#bcfff5}button{transition:filter .18s,transform .18s}button:hover{filter:brightness(1.15)}#workspace{min-width:0}footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px!important;border-top:1px solid var(--lr-line)!important}footer .lr-monogram{width:90px}.lr-footer-caption{font:600 10px 'Fira Code',monospace;letter-spacing:.14em;color:#8bb6bb}@media(max-width:650px){#app{width:100vw;height:100dvh;border-radius:0}header{padding:10px 15px}.lr-top-identity{gap:4px}.lr-sys-label{display:none}header .lr-monogram{width:70px}footer .lr-monogram{width:65px}.lr-footer-caption{font-size:8px}} </style></head>
 
 <body>
     <div id="app">
         <header>
-            <h1>OMNI-SCIENCE</h1>
+            <div class="lr-top-identity"><span class="lr-sys-label">ENGINEERING / WORKSPACE</span><h1>OMNI-SCIENCE</h1><a class="lr-brand-link" href="https://github.com/lamberthrumpaidus" target="_blank" rel="noopener noreferrer" aria-label="Kreator L/R di GitHub"><img class="lr-monogram" src="brand-lr.svg" alt="L/R — Lamberth Rumpaidus" loading="lazy" decoding="async"></a></div>
         </header>
         <main>
             <aside id="sidebar"></aside>
@@ -32,12 +41,7 @@
                 </div>
             </section>
         </main>
-        <footer>
-            dibuat dan dikembangkan oleh <strong>
-                <a href="https://github.com/lamberthrumpaidus" target="_blank"
-                    style="color: inherit; text-decoration: none;">Lamberth Rumpaidus</a>
-            </strong>
-        </footer>
+        <footer><a class="lr-brand-link" href="https://github.com/lamberthrumpaidus" target="_blank" rel="noopener noreferrer" aria-label="L/R — GitHub"><img class="lr-monogram" src="brand-lr.svg" alt="L/R — Lamberth Rumpaidus" loading="lazy" decoding="async"></a><span class="lr-footer-caption">SCIENTIFIC COMPUTING LAB</span></footer>
     </div>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
