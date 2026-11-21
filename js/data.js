@@ -1,3 +1,4 @@
+/* ALL Create by LamberthRumpaidus */
 const DB = {
     "Kalkulator Dasar": {
         "Operasi Standar": {

@@ -1,3 +1,4 @@
+/* ALL Create by LamberthRumpaidus */
 const LAB_KEY = "omni-science-v3";
 const LAB_LIMIT = 30;
 let labHistory = [];

@@ -1,3 +1,4 @@
+/* ALL Create by LamberthRumpaidus */
 let currentCategory = "";
 let currentFormula = "";
 
