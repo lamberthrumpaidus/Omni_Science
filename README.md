@@ -30,7 +30,3 @@ Gunakan [aplikasi online](https://omn1sc1ence.netlify.app/) atau jalankan websit
 ```bash
 python -m http.server 8000
 ```
-
----
-
-<p align="center"><sub>Developed by <a href="https://github.com/lamberthrumpaidus/lamberthrumpaidus">Lamberth Rumpaidus</a></sub></p>
