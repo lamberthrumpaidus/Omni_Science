@@ -1,32 +1,24 @@
 <div align="center">
-  <img src="./app-logo.svg" alt="Logo Omni-Science" width="90" />
+  <img src="./app-logo.svg" alt="Logo Omni-Science" width="88" />
   <h1>Omni-Science</h1>
-  <p>Workspace komputasi ilmiah berbasis browser.</p>
-  <p><a href="https://omn1sc1ence.netlify.app/">Buka aplikasi</a> · <a href="https://github.com/lamberthrumpaidus/lamberthrumpaidus">Profil L/R</a></p>
+  <p>Aplikasi web untuk perhitungan matematika dan sains.</p>
+  <p><a href="https://omn1sc1ence.netlify.app/">Buka aplikasi</a> · <a href="https://github.com/lamberthrumpaidus/lamberthrumpaidus">Profil utama</a></p>
 </div>
 
 ---
 
-### Tentang aplikasi
+## Tentang aplikasi
 
-Omni-Science menyediakan kumpulan kalkulator dan rumus dalam satu antarmuka, mulai dari operasi matematika hingga perhitungan dari berbagai bidang sains.
+Omni-Science mengumpulkan berbagai fungsi perhitungan dalam satu antarmuka, meliputi matematika, fisika, kimia, biologi, dan konversi satuan. Fitur pencarian membantu pengguna menemukan perhitungan yang diperlukan, sedangkan riwayat dan favorit memudahkan penggunaan berulang.
 
-| Bidang | Contoh |
-|---|---|
-| Matematika | Aritmatika, kalkulus, matriks |
-| Fisika | Mekanika, relativitas, fluida |
-| Kimia | Molaritas, termodinamika |
-| Biologi | Perhitungan biofisika |
-| Konversi | Satuan dan representasi angka |
+**Teknologi:** HTML, CSS, dan JavaScript.
 
-Fitur pendukung meliputi pencarian rumus, numpad, riwayat lokal, favorit, dan ekspor hasil. **Perhitungan khusus tetap perlu diverifikasi sebelum digunakan untuk kebutuhan kritis.**
+Hasil perhitungan dapat dipakai untuk pembelajaran dan eksplorasi. Untuk kebutuhan akademik atau profesional yang memerlukan ketelitian tinggi, hasil tetap perlu diperiksa terhadap metode dan referensi yang sesuai.
 
-**Teknologi:** HTML · CSS · JavaScript
-
-### Menjalankan
-
-Gunakan [aplikasi online](https://omn1sc1ence.netlify.app/) atau jalankan website menggunakan server lokal:
+## Menjalankan secara lokal
 
 ```bash
 python -m http.server 8000
 ```
+
+Buka `http://localhost:8000` melalui browser.
