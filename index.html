@@ -25,7 +25,31 @@
 :where(button,a,input,select,textarea):focus-visible{outline:2px solid var(--lr-aqua);outline-offset:3px}
 @media(prefers-reduced-motion:reduce){.lr-brand-link{transition:none!important}}
 
-body{background:radial-gradient(ellipse at 12% 5%,#0d3c3e 0%,transparent 43%),radial-gradient(ellipse at 87% 83%,#12303f 0%,transparent 50%),#050a12}#app{border:1px solid var(--lr-line);background:linear-gradient(145deg,#0e1723,#0b101c);box-shadow:0 24px 90px #0009,0 0 60px #00cba010}header{background:linear-gradient(90deg,#0d1b28,#0a1320);border-color:var(--lr-line)}.lr-top-identity{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}.lr-sys-label{font:600 10px/1.4 'Fira Code',monospace;letter-spacing:.14em;color:#79d5cc}header h1{color:#eaffff;letter-spacing:.04em;text-shadow:0 0 20px #00bba633}header .lr-monogram{width:90px}#sidebar{background:#0b1521;border-color:var(--lr-line)}.cat-btn:hover,.cat-btn.active{background:linear-gradient(90deg,#0a3c40,#101a29);color:#bcfff5}button{transition:filter .18s,transform .18s}button:hover{filter:brightness(1.15)}#workspace{min-width:0}footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px!important;border-top:1px solid var(--lr-line)!important}footer .lr-monogram{width:90px}.lr-footer-caption{font:600 10px 'Fira Code',monospace;letter-spacing:.14em;color:#8bb6bb}@media(max-width:650px){#app{width:100vw;height:100dvh;border-radius:0}header{padding:10px 15px}.lr-top-identity{gap:4px}.lr-sys-label{display:none}header .lr-monogram{width:70px}footer .lr-monogram{width:65px}.lr-footer-caption{font-size:8px}} </style></head>
+body{background:radial-gradient(ellipse at 12% 5%,#0d3c3e 0%,transparent 43%),radial-gradient(ellipse at 87% 83%,#12303f 0%,transparent 50%),#050a12}#app{border:1px solid var(--lr-line);background:linear-gradient(145deg,#0e1723,#0b101c);box-shadow:0 24px 90px #0009,0 0 60px #00cba010}header{background:linear-gradient(90deg,#0d1b28,#0a1320);border-color:var(--lr-line)}.lr-top-identity{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}.lr-sys-label{font:600 10px/1.4 'Fira Code',monospace;letter-spacing:.14em;color:#79d5cc}header h1{color:#eaffff;letter-spacing:.04em;text-shadow:0 0 20px #00bba633}header .lr-monogram{width:90px}#sidebar{background:#0b1521;border-color:var(--lr-line)}.cat-btn:hover,.cat-btn.active{background:linear-gradient(90deg,#0a3c40,#101a29);color:#bcfff5}button{transition:filter .18s,transform .18s}button:hover{filter:brightness(1.15)}#workspace{min-width:0}footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:8px!important;border-top:1px solid var(--lr-line)!important}footer .lr-monogram{width:90px}.lr-footer-caption{font:600 10px 'Fira Code',monospace;letter-spacing:.14em;color:#8bb6bb}@media(max-width:650px){#app{width:100vw;height:100dvh;border-radius:0}header{padding:10px 15px}.lr-top-identity{gap:4px}.lr-sys-label{display:none}header .lr-monogram{width:70px}footer .lr-monogram{width:65px}.lr-footer-caption{font-size:8px}} </style>
+<!-- ALL Create by LamberthRumpaidus | Inspection deterrent (not a security boundary) -->
+<script id="lr-inspection-guard">
+(()=>{'use strict';
+  if(window.__lrInspectionGuard)return;
+  window.__lrInspectionGuard=true;
+  // Preserve keyboard navigation, text editing, copying, and game controls.
+  const interactive='a,button,input,textarea,select,option,[contenteditable]:not([contenteditable="false"]),canvas,video,audio,pre,code,[role="application"],[role="log"],[role="button"]';
+  document.addEventListener('contextmenu',event=>{
+    if(event.target instanceof Element&&event.target.closest(interactive))return;
+    if(event.cancelable)event.preventDefault();
+  });
+  document.addEventListener('keydown',event=>{
+    if(event.isComposing)return;
+    const key=String(event.key||'').toLowerCase();
+    const command=event.ctrlKey||event.metaKey;
+    const developerShortcut=key==='f12'||
+      (command&&event.shiftKey&&['i','j','c','k'].includes(key))||
+      (event.metaKey&&event.altKey&&['i','j','c','u'].includes(key))||
+      (command&&!event.shiftKey&&!event.altKey&&key==='u');
+    if(developerShortcut&&event.cancelable)event.preventDefault();
+  },true);
+})();
+</script>
+</head>
 
 <body>
     <div id="app">
